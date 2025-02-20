@@ -15,7 +15,7 @@ import os
 
 flower_router = APIRouter(prefix="/flowers", tags=["flower"])
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
-template = Jinja2Templates(directory="./templates")
+template = Jinja2Templates(directory="app/templates")
 
 @flower_router.get("/")
 def get_all_flowers(request: Request, db: Session = Depends(get_db), page: int = 1, per_page: int = 5):

@@ -14,7 +14,7 @@ import os
 user_router = APIRouter(prefix="/users", tags=["user"])
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
-template = Jinja2Templates(directory="./templates")
+template = Jinja2Templates(directory="app/templates")
 
 def generate_access_token(user_id: int):
     secret = os.getenv("AUTH_SECRET", "secret")
