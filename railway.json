@@ -3,10 +3,10 @@
   "build": {
     "builder": "DOCKERFILE",
     "watchPatterns": [
-      "/app/*.py",
-      "/app/**/*.py",
-      "/Dockerfile", 
-      "/pyproject.toml"
+      "Dockerfile",
+      "app/*.py",
+      "app/**/*.py",
+      "pyproject.toml"
     ]
   },
   "deploy": {
