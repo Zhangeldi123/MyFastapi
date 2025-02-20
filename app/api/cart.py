@@ -9,7 +9,7 @@ import json
 
 
 cart_router = APIRouter(prefix="/cart", tags=["cart"])
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="./templates")
 
 @cart_router.post("/items")
 def add_to_cart(request: Request, flower_id: int = Form(...), cart: str = Cookie(default="[]")):
