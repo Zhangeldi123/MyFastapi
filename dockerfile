@@ -1,4 +1,4 @@
-FROM python:3.12.2 as requirements-stage
+FROM python:3.12.2 AS requirements-stage
 
 WORKDIR /tmp
 RUN pip install poetry==1.5.0
@@ -12,4 +12,4 @@ COPY --from=requirements-stage /tmp/requirements.txt .
 RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 COPY . .
 
-ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "app.main:app"]
+ENTRYPOINT ["sh", ".scripts/launch.sh"]  
