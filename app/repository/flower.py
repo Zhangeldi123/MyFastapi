@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from models.flower import Flower
-from schemas.flower import FlowerRequest
+from ..models.flower import Flower
+from ..schemas.flower import FlowerRequest
 
 class FlowerRepository:
     def create_flower(db: Session, flower_data: FlowerRequest) -> Flower:

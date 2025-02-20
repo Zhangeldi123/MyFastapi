@@ -2,14 +2,14 @@ from fastapi import APIRouter, Depends, Form, HTTPException, Request, Response
 from fastapi.responses import HTMLResponse, RedirectResponse
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer
-from hw_back_8.app.database import get_db
+from ..database import get_db
 from fastapi.templating import Jinja2Templates
-from repository.flower import FlowerRepository
-from schemas.user import UserResponse
+from ..repository.flower import FlowerRepository
+from ..schemas.user import UserResponse
 from datetime import datetime, timedelta, timezone
-from schemas.user import UserCreate
-from schemas.flower import FlowerRequest
-from schemas.flower import FlowerResponse
+from ..schemas.user import UserCreate
+from ..schemas.flower import FlowerRequest
+from ..schemas.flower import FlowerResponse
 import jwt
 import os
 

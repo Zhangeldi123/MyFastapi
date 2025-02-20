@@ -12,4 +12,6 @@ COPY --from=requirements-stage /tmp/requirements.txt .
 RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 COPY . .
 
-ENTRYPOINT ["sh", ".scripts/launch.sh"]  
+EXPOSE 8000
+
+ENTRYPOINT ["sh", "./scripts/launch.sh"]  
